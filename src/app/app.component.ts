@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo06-material';
+
+  constructor(private dialogo: MatDialog) {
+
+  }
+  public mostrarDialogo() {
+    this.dialogo.open(AppComponent,{
+      width: '250px',
+    });
+  }
 }
