@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
+import {VentanaDialogoComponent} from "./components/ventana-dialogo/ventana-dialogo.component";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,13 @@ export class AppComponent {
 
   }
   public mostrarDialogo() {
-    this.dialogo.open(AppComponent,{
+    this.dialogo.open(VentanaDialogoComponent,{
       width: '250px',
     });
   }
+
+  public cerrarDialogo(){
+  }
+
+  protected readonly VentanaDialogoComponent = VentanaDialogoComponent;
 }
